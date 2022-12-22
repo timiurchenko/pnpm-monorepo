@@ -1,0 +1,20 @@
+name: PNPM-PR-Snyk-Check
+
+on: workflow_dispatch
+jobs:
+  pnpm_snyk_check:
+    runs-on: ubuntu-latest
+    name: Snyk post processing
+    steps:
+    - uses: actions/checkout@v2
+    - name: pnpm Snyk Delta
+      id: pnpm-snyk-delta
+      uses: snyk-tech-services/github-actions-pnpm-snyk@master
+      with:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        pnpmLockfilePath: "tests/fixtures/with-tslint/"
+        snykOrganization: playground
+        # snykArguments: "--severity-threshold=high"
+        # breakBuild: false
+        # fullScan: false
+
