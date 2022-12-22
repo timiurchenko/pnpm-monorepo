@@ -11,7 +11,7 @@ jobs:
       id: pnpm-snyk-delta
       uses: snyk-tech-services/github-actions-pnpm-snyk@master
       with:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        snykToken: ${{ secrets.snykToken }}
         pnpmLockfilePath: "tests/fixtures/with-tslint/"
         snykOrganization: playground
         # snykArguments: "--severity-threshold=high"
