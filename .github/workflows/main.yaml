@@ -12,7 +12,7 @@ jobs:
         uses: snyk-tech-services/snyk-pnpm-github-action@master
         with:
           snykToken: ${{ secrets.snykToken }}
-          pnpmLockfilePath: "./pnpm-lock.yaml"
+          pnpmLockfilePath: "./"
           IncludeDev: "false"
         # snykArguments: "--severity-threshold=high"
         # breakBuild: false
