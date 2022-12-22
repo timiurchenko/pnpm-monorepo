@@ -13,7 +13,10 @@ jobs:
         with:
           snykToken: ${{ secrets.snykToken }}
           pnpmLockfilePath: "./"
+          snykOrganization: app4-team
           IncludeDev: "false"
+          
+          
         # snykArguments: "--severity-threshold=high"
         # breakBuild: false
         # fullScan: false
