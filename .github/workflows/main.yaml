@@ -1,4 +1,4 @@
-name: PNPM-PR-Snyk-Check
+name: PNPM-Snyk-Check
 
 on: workflow_dispatch
 jobs:
@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Snyk post processing
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Snyk API pnpm scan
         id: pnpm-scan-api-tool
         uses: snyk-tech-services/snyk-pnpm-github-action@master
